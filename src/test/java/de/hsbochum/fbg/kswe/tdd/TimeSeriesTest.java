@@ -21,6 +21,4 @@ public class TimeSeriesTest {
         
         Assert.assertThat(ts.calculateMean(), CoreMatchers.is(13.0));
     }
-    
-
 }
