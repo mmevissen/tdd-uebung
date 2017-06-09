@@ -10,9 +10,25 @@ public class Observation {
     private double value;
     private DateTime dateTime;
 
+    public Unit getUnit() {
+        return unit;
+    }
+
+    private Unit unit;
+
     public Observation(double value, DateTime dateTime) {
-       this.value = value;
-       this.dateTime = dateTime;
+        initialize(value, dateTime);
+        this.unit = Unit.m;
+    }
+
+    public Observation(double value, DateTime dateTime, Unit unit) {
+        initialize(value, dateTime);
+        this.unit = unit;
+    }
+
+    private void initialize(double value, DateTime dateTime) {
+        this.value = value;
+        this.dateTime = dateTime;
     }
 
     public double getValue() {
